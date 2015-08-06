@@ -1,0 +1,35 @@
+<h3>Customer Details <a href="#/profileEdit">Edit</a></h3>
+        <table class="table table-hover">
+            <tr>
+                <td> Name</td>
+                <td> {{customer.fname}} {{customer.lname}}</td>
+            </tr>
+            <tr >
+                <td>Email</td>
+                <td>{{customer.email}}</td>
+            </tr>
+            <tr >
+                <td>Phone</td>
+                <td>{{customer.phone}}</td>
+            </tr>            
+        </table>
+
+<h3>Call Lists </h3>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <tr>
+                <th>Call Subject</th>
+                <th> Duration(In mins) </th>
+                <th> Owner Name </th>
+            </tr>
+            <tr ng-repeat="call in notes">
+                <td>{{call.subject}}</td>
+                <td>{{call.duration}}</td>
+                <td>{{call.name}}</td>
+            </tr>
+        </table>
+        <a href="#/newNote" class="btn btn-lg btn-primary " role="button" >Add new Note</a>
+    </div>  
+
+</div>
